@@ -38,7 +38,7 @@ const ProductList = () => {
           </div>
         </div>
       </div>
-      <FAQ />
+      <FAQ alignLeft/>
     </div>
   );
 };

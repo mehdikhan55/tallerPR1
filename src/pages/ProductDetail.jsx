@@ -14,11 +14,11 @@ const ProductDetail = () => {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Product Image Section */}
         <div className="relative">
-          <div className="bg-white rounded-lg p-6 shadow-2xl">
-            <img
+          <div className="bg-white rounded-lg p-6 shadow-2xl border border-primary">
+            <img 
               src={tableImg}
               alt="Product"
-              className="w-full h-auto rounded-lg"
+              className="w-full h-auto rounded-lg "
             />
             <div className="absolute top-8 left-8 flex gap-2">
               <span className="bg-primary text-white px-4 py-2 rounded-full text-sm">
@@ -55,7 +55,7 @@ const ProductDetail = () => {
           </p>
 
           <div className="flex items-center gap-4 mb-8">
-            <div className="flex items-center border rounded-full">
+            {/* <div className="flex items-center border rounded-full">
               <button
                 className="px-4 py-2 text-primary"
                 onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -68,12 +68,14 @@ const ProductDetail = () => {
                 onClick={() => setQuantity(quantity + 1)}
               >
                 +
-              </button>
+              </button> */}
+            <div className="flex items-center border rounded-full gap-2">
+              <span className="px-4 py-2 border border-primary rounded-full">{quantity}</span>
+              <span className='flex items-center justify-center p-2 px-4 bg-primary rounded-full gap-1 text-white '>
+                <ShoppingCart/>
+                <p>Añadir a la cesta</p>
+              </span>
             </div>
-            <button className="bg-primary text-white px-6 py-2 rounded-full flex items-center gap-2">
-              <ShoppingCart className="w-5 h-5" />
-              Añadir a la cesta
-            </button>
           </div>
         </div>
       </div>
@@ -164,7 +166,7 @@ const ModifiedProductCategoryCard = ({ image, title, subtitle, index }) => (
         <div className="relative w-20 h-20 flex-shrink-0">
           <div className="rounded-full w-full h-full p-1 flex items-center justify-center border-2 border-primary overflow-hidden">
             <div className="relative w-full h-full">
-              <div className="relative rounded-full overflow-hidden">
+              <div className="relative rounded-full overflow-hidden ">
                 <img
                   src={image}
                   alt={title}
