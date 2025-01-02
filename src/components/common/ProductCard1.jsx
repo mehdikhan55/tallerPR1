@@ -31,7 +31,7 @@ const ProductCard1 = ({ index, title, description, price, rentPrice }) => {
         </div>
 
         <div className="mt-4">
-          <h3 className="text-lg font-semibold text-primary">{title}</h3>
+          <h3 className="text-md font-semibold text-primary">{title}</h3>
           <p className="text-xs text-gray-500 ">{description}</p>
 
           <div className="mt-2">

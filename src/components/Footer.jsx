@@ -16,15 +16,15 @@ const Footer = () => {
           {/* About Us */}
           <div>
             <h3 className="text-xl font-bold mb-4">Sobre Nosotras</h3>
-            <p className="text-gray-300 text-sm">
-              TallerPR specializes in custom products made from metal, wood, PVC, and resin using advanced techniques like CNC and 3D printing. We create solutions for home decor and business needs.
+            <p className="text-white text-sm">
+              <span className='font-semibold'>TallerPR</span> specializes in custom products made from metal, wood, PVC, and resin using advanced techniques like CNC and 3D printing. We create solutions for home decor and business needs.
             </p>
           </div>
 
           {/* Services */}
           <div>
             <h3 className="text-xl font-bold mb-4">Servicios</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
+            <ul className="space-y-2 text-white text-sm">
               <li>Servicio 01</li>
               <li>Servicio 02</li>
               <li>Servicio 03</li>
@@ -37,7 +37,7 @@ const Footer = () => {
           {/* Quick Links */}
           <div>
             <h3 className="text-xl font-bold mb-4">Enlaces rápidos</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
+            <ul className="space-y-2 text-white text-sm">
               <li>Servicios</li>
               <li>Preguntas Frecuentes</li>
               <li>Testimonios</li>
@@ -49,8 +49,8 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Contacta con nosotros</h3>
-            <ul className="space-y-2 text-gray-300 text-sm">
+            <h3 className="text-xl font-bold mb-4">Contacta con <br />nosotros</h3>
+            <ul className="space-y-2 text-white text-sm">
               <li>Formulario de consulta</li>
               <li>soporte@tallerpr.com</li>
               <li>+1 787 500 0051</li>
@@ -61,18 +61,18 @@ const Footer = () => {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-gray-700">
+      <div className="border-t border-white">
         <div className="max-w-[1100px] mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
-          <p className="text-sm text-gray-300 mb-4 sm:mb-0">
+          <p className="text-sm text-white mb-4 sm:mb-0">
             Copyright © {currentYear} TallerPR
           </p>
           
           <div className="flex space-x-4">
-            <img src={whatsapp} className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
-            <img src={facebook} className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
-            <img src={instagram} className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
-            <img src={x} className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
-            <img src={linkedin} className="w-5 h-5 text-gray-300 hover:text-white cursor-pointer" />
+            <img src={whatsapp} className="w-5 h-5 text-white hover:text-white cursor-pointer" />
+            <img src={facebook} className="w-5 h-5 text-white hover:text-white cursor-pointer" />
+            <img src={instagram} className="w-5 h-5 text-white hover:text-white cursor-pointer" />
+            <img src={x} className="w-5 h-5 text-white hover:text-white cursor-pointer" />
+            <img src={linkedin} className="w-5 h-5 text-white hover:text-white cursor-pointer" />
           </div>
         </div>
       </div>

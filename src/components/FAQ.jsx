@@ -7,7 +7,7 @@ const FAQ = ({alignLeft=false}) => {
 
 
   return (
-    <div className="px-8 py-9">
+    <div className="px-4 py-9">
       <div className={`${!alignLeft && "text-center" } mb-8`}>
         <h2 className="main-heading">Preguntas Frecuentes</h2>
         <p className="sub-heading">Respuestas a tus preguntas frecuentes</p>

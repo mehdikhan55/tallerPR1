@@ -7,8 +7,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-secondary py-4 text-xs">
-      <div className="max-w-[1100px] mx-auto px-4">
+    <nav className="bg-secondary py-6 text-xs ">
+      <div className="max-w-[1100px] mx-auto px-6">
         {/* Desktop Nav */}
         <div className="flex items-center justify-between">
 
