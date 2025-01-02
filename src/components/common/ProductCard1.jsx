@@ -1,54 +1,63 @@
 import React from 'react';
 import tableImg from "../../assets/images/table.png";
-import { ArrowUpRight, Heart, ShoppingCart } from 'lucide-react';
+import { ArrowUpRight } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import cartPlusIcon from "../../assets/icons/cart-plus.png";
+import heartPlusIcon from "../../assets/icons/heart-plus.png";
 
-const ProductCard1 = ({ title, description, price, rentPrice }) => {
+const ProductCard1 = ({ index, title, description, price, rentPrice }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate('/product-details');
   }
 
-    return (
-      <div className="bg-white rounded-lg p-6 shadow-2xl">
+  return (
+    <div className={`p-[1px] rounded-xl shadow-2xl
+      ${index % 2 === 0
+        ? 'bg-gradient-to-t from-primary via-primary/30 to-transparent'
+        : 'bg-gradient-to-b from-primary via-primary/30 to-transparent'
+      }
+    `}>
+      <div className="bg-white rounded-xl p-4 h-full">
         <div className="relative">
-          <img src={tableImg} alt={title} className="w-full h-48 object-cover rounded-lg" />
-          <button className="absolute top-2 right-2 p-2 bg-primary rounded-full">
-            <ShoppingCart className="w-5 h-5 text-white" />
+          <img src={tableImg} alt={title} className="w-full h-44 object-cover rounded-lg" />
+          <button className="absolute top-0 -right-2 p-2 bg-primary rounded-full">
+            <img src={cartPlusIcon} alt="" className='w-4 h-4' />
           </button>
-          <button className="absolute top-14 right-2 p-2 bg-primary rounded-full">
-            <Heart className="w-5 h-5 text-white" />
+          <button className="absolute top-9 -right-2 p-2 bg-primary rounded-full">
+            <img src={heartPlusIcon} alt="" className='w-4 h-4' />
           </button>
         </div>
 
         <div className="mt-4">
-          <h3 className="text-xl font-semibold text-primary">{title}</h3>
-          <p className="text-sm text-gray-500 mt-1">{description}</p>
+          <h3 className="text-lg font-semibold text-primary">{title}</h3>
+          <p className="text-xs text-gray-500 ">{description}</p>
 
-          <div className="mt-3">
-            <span className="text-lg font-bold text-secondary">${price}</span>
-            <div className="text-sm text-primary font-semibold">
+          <div className="mt-2">
+            <span className="text-sm font-bold text-secondary">${price}</span>
+            <div className="text-xs text-primary font-semibold">
               Rent Per Day <span className="text-secondary font-semibold">${rentPrice}</span>
             </div>
           </div>
 
-          <div className="mt-4">
-            <button onClick={handleClick} className="w-full bg-primary text-white py-2 rounded-full mb-3 flex items-center justify-center">
+          <div className="mt-2">
+            <button onClick={handleClick} className="w-full bg-primary text-white py-1 rounded-full mb-2 flex items-center justify-center text-sm">
               <p>Explorar Más</p> <ArrowUpRight />
             </button>
             <div className="flex gap-2">
-              <button className="flex-1 flex items-center justify-center border border-primary text-primary py-2 rounded-full">
+              <button className="flex-1 flex items-center justify-center border border-primary text-primary py-1 rounded-full text-sm">
                 <p className='font-semibold'>Comprar </p> <ArrowUpRight />
               </button>
-              <button className="flex-1 flex items-center justify-center border border-primary text-primary py-2 rounded-full">
+              <button className="flex-1 flex items-center justify-center border border-primary text-primary py-1 rounded-full text-sm">
                 <p className='font-semibold'>Rentar </p> <ArrowUpRight />
               </button>
             </div>
           </div>
         </div>
       </div>
-    );
-  }
+    </div>
+  );
+}
 
-  export default ProductCard1;
+export default ProductCard1;

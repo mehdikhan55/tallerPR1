@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 import logo from "../assets/logo.png"
 import { Search, ShoppingCart, Heart, Menu, X, SlidersHorizontal } from 'lucide-react'
+import exploreIcon from "../assets/icons/explore.png"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-secondary py-4">
-      <div className="max-w-7xl mx-auto px-4">
+    <nav className="bg-secondary py-4 text-xs">
+      <div className="max-w-[1100px] mx-auto px-4">
         {/* Desktop Nav */}
         <div className="flex items-center justify-between">
 
@@ -20,11 +21,11 @@ const Navbar = () => {
               <div className="relative bg-white rounded-full flex">
                 <input
                   type="text"
-                  placeholder="Search"
-                  className="pl-12 pr-32 py-3 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none w-64 shadow-lg"
+                  placeholder=""
+                  className="pl-12 pr-32 py-0 rounded-full text-gray-800 placeholder-gray-400 focus:outline-none w-64 shadow-lg"
                 />
-                <button className="absolute left-4 top-3.5">
-                  <Search className="h-5 w-5 text-primary" />
+                <button className="absolute left-4 top-[25%] ">
+                  <Search className="h-6 w-6 text-primary" />
                 </button>
                 <div className="flex items-center justify-center gap-1 p-1">
                   <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2">
@@ -38,16 +39,11 @@ const Navbar = () => {
               </div>
 
               <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2">
-                <Search className="h-5 w-5" />
-                <span>Search</span>
-              </button>
-
-              <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2">
                 <ShoppingCart className="h-5 w-5" />
                 <span>Cesta</span>
               </button>
 
-              <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2">
+              <button className="bg-primary text-white px-4 py-2 rounded-full flex items-center space-x-2 gap-1">
                 <Heart className="h-6 w-6" />
                 Favorita
               </button>
@@ -66,7 +62,10 @@ const Navbar = () => {
               </div>
               <div className="hidden md:flex mt-4">
                 <button className="bg-primary text-white px-4 py-2 rounded-full">
-                  Explorar Productos
+                  <span className='flex gap-1 items-center justify-center'>
+                    <img src={exploreIcon} alt="" width={18} />
+                    <p>Explorar Productos</p>
+                  </span>
                 </button>
               </div>
             </div>

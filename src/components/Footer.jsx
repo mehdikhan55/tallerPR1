@@ -11,7 +11,7 @@ const Footer = () => {
   
   return (
     <footer className="bg-secondary text-white">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+      <div className="max-w-[1100px] mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* About Us */}
           <div>
@@ -62,7 +62,7 @@ const Footer = () => {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-700">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
+        <div className="max-w-[1100px] mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center">
           <p className="text-sm text-gray-300 mb-4 sm:mb-0">
             Copyright © {currentYear} TallerPR
           </p>

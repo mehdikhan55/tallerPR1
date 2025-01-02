@@ -5,7 +5,7 @@ import ProductCategoryCard from './ProductCategoryCard';
 const ProductCategories = () => {
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-16">
+    <div className="max-w-[1100px] mx-auto px-4 py-10">
       <div className="text-center mb-12">
         <h2 className="main-heading">Todos los Productos</h2>
         <p className="sub-heading">

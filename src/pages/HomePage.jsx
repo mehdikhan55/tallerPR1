@@ -10,8 +10,8 @@ const HomePage = () => {
   return (
     <>
       <HeroSection />
-      <div className="max-w-[1400px] mx-auto ">
-        <main className="">
+      <div className="max-w-[1100px] mx-auto ">
+        <main className="max-w-[1100px]">
           <VideoSection />
           <RawMaterial />
           <ProductCategories />

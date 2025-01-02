@@ -17,8 +17,8 @@ const materials = [
 
 const RawMaterial = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4">
-      <div className="text-center mb-12">
+    <div className=" mx-auto px-4">
+      <div className="text-center mb-8">
         <h2 className="main-heading">Materias Primas</h2>
         <p className="sub-heading">
           Desde el diseño hasta la producción de productos 
@@ -29,6 +29,7 @@ const RawMaterial = () => {
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
         {materials.map((material, index) => (
           <RawMaterialCard 
+          index={index}
             key={index}
             icon={material.icon} 
             title={material.title}

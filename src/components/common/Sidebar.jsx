@@ -18,39 +18,39 @@ const Sidebar = () => {
   const [priceRange, setPriceRange] = useState([40, 290]);
 
   return (
-    <div className="w-72 p-4 bg-white">
-      <div className="mb-8">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-lg font-medium">Filtrar Por Precio</h2>
+    <div className="w-72 p-4 pl-0 py-0 bg-white">
+      <div className="mb-3">
+        <div className="flex justify-between items-center mb-1 ">
+          <h2 className="text-xs font-medium">Filtrar Por Precio</h2>
         </div>
-        <div className="bg-white p-4 rounded-lg">
+        <div className="bg-white p-3 py-0 rounded-lg">
           <Slider
             range
             min={0}
             max={300}
             value={priceRange}
             onChange={(value) => setPriceRange(value)}
-            railStyle={{ backgroundColor: '#E5E7EB' }}
-            trackStyle={[{ backgroundColor: '#FC7327' }]}
+            railStyle={{ backgroundColor: '#2F3344' }}
+            trackStyle={[{ backgroundColor: '#2F3344' }]}
             handleStyle={[
               { 
-                borderColor: '#FC7327',
-                backgroundColor: '#FC7327',
+                borderColor: '#2F3344',
+                backgroundColor: '#2F3344',
                 opacity: 1,
               },
               {
-                borderColor: '#FC7327',
-                backgroundColor: '#FC7327',
+                borderColor: '#2F3344',
+                backgroundColor: '#2F3344',
                 opacity: 1,
               }
             ]}
           />
-          <div className="flex justify-between mt-2">
-            <div className="bg-primary px-3 py-1 rounded-full text-sm flex gap-1 text-white items-center justify-center">
-              <p>Filter</p><SlidersHorizontal color='white'/>
+          <div className="flex justify-between mt-2 items-center">
+            <div className="bg-primary px-3 py-1 rounded-full flex gap-1 text-white items-center justify-center text-xs">
+            <SlidersHorizontal size={14} color='white'/> <p>Filter</p>
 
             </div>
-            <span className="text-sm text-gray-600">
+            <span className="text-xs text-gray-600">
               Price: ${priceRange[0]}-${priceRange[1]}
             </span>
           </div>
@@ -58,10 +58,10 @@ const Sidebar = () => {
       </div>
 
       <div>
-        <h2 className="text-lg font-medium mb-4">Categorias</h2>
-        <ul className="space-y-3">
+        <h2 className="text-xs font-semibold mb-2">Categorias</h2>
+        <ul className="space-y-0">
           {categories.map((category, index) => (
-            <li key={index} className="flex justify-between items-center text-secondary hover:text-primary cursor-pointer">
+            <li key={index} className="flex justify-between items-center text-secondary hover:text-primary cursor-pointer text-xs ">
               <span>{category.name}</span>
               <span className="text-sm text-secondary">({category.count})</span>
             </li>
