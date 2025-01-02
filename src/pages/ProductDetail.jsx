@@ -4,13 +4,14 @@ import tableImg from '../assets/images/table.png';
 import ProductCard1 from '../components/common/ProductCard1';
 import { image2, image3, image4, image5, image6, image10, image11, image12 } from "../components/ProductCategories/index";
 import FAQ from '../components/FAQ';
+import play from "../assets/icons/play.png"
 
 const ProductDetail = () => {
   const [activeTab, setActiveTab] = useState('description');
   const [quantity, setQuantity] = useState(5);
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-[1100px] mx-auto px-4 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
         {/* Product Image Section */}
         <div className="relative">
@@ -18,15 +19,16 @@ const ProductDetail = () => {
             <img 
               src={tableImg}
               alt="Product"
-              className="w-full h-auto rounded-lg "
+              className="w-full h-[28rem] rounded-lg "
             />
             <div className="absolute top-8 left-8 flex gap-2">
               <span className="bg-primary text-white px-4 py-2 rounded-full text-sm">
                 Venta!
               </span>
               <button className="bg-primary text-white px-4 py-2 rounded-full text-sm flex items-center gap-2">
-                <PlayCircle className="w-4 h-4" />
                 Ver Video
+                {/* <PlayCircle className="w-4 h-4" /> */}
+                <img src={play} className="w-3 h-3" />
               </button>
             </div>
             <button className="absolute bottom-8 right-8 bg-primary text-white p-2 rounded-full">
@@ -37,16 +39,16 @@ const ProductDetail = () => {
 
         {/* Product Info Section */}
         <div>
-          <h1 className="text-4xl font-bold text-primary mb-4">Home Decor</h1>
+          <h1 className="text-xl font-bold text-primary ">Home Decor</h1>
           <div className="flex items-baseline gap-2 mb-2">
             <span className="text-gray-500 line-through">$1024.99</span>
             <span className="text-2xl font-bold text-secondary">$924.99</span>
           </div>
-          <div className="text-primary font-medium mb-6">
+          <div className="text-primary font-medium mb-2">
             Rent Per Day <span className="text-secondary">$299.99</span>
           </div>
 
-          <p className="text-gray-600 mb-8">
+          <p className="text-secondary mb-8">
             Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
             vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu ad
             litora torquent per conubia nostra, per inceptos himenaeos. Mauris in
@@ -86,7 +88,7 @@ const ProductDetail = () => {
           <div className="flex gap-8">
             <button
               className={`pb-4 px-1 ${activeTab === 'description'
-                ? 'border-b-2 border-primary text-primary'
+                ? 'border-t-2 border-secondary text-secondary'
                 : 'text-gray-500'
                 }`}
               onClick={() => setActiveTab('description')}
@@ -95,7 +97,7 @@ const ProductDetail = () => {
             </button>
             <button
               className={`pb-4 px-1 ${activeTab === 'reviews'
-                ? 'border-b-2 border-primary text-primary'
+                ? 'border-t-2 border-secondary text-secondary'
                 : 'text-gray-500'
                 }`}
               onClick={() => setActiveTab('reviews')}
@@ -105,13 +107,13 @@ const ProductDetail = () => {
           </div>
         </div>
 
-        <div className="py-8">
+        <div className="py-1">
           {activeTab === 'description' ? (
-            <div className="space-y-6">
+            <div className="space-y-2 text-sm">
               <h2 className="text-xl font-bold text-secondary mb-4">
                 Descripción del Producto
               </h2>
-              <p className="text-gray-600">
+              <p className="text-secondary">
                 Since it's creation lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
               </p>
               <p className="text-gray-600">
@@ -137,7 +139,7 @@ const ProductDetail = () => {
 
       <h2 className='main-heading mt-20'>Todos los Productos</h2>
       <p className='sub-heading'>Explora toda nuestra colección de productos por categorías.</p>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-4">
         {categories.map((category, index) => (
           <ModifiedProductCategoryCard
             key={index}
@@ -156,12 +158,12 @@ const ProductDetail = () => {
 export default ProductDetail;
 
 const ModifiedProductCategoryCard = ({ image, title, subtitle, index }) => (
-  <div className={`bg-white rounded-2xl p-[1px] shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden
+  <div className={`bg-white rounded-2xl shadow-[0px_0px_30px_#e0e0e0]  p-[1px] hover:shadow-md transition-shadow duration-300 overflow-hidden
     ${index % 2 === 0
       ? 'bg-gradient-to-t from-primary/70 via-primary/30 to-transparent'
       : 'bg-gradient-to-b from-primary/70 via-primary/30 to-transparent'
     }`}>
-    <div className="bg-white rounded-2xl p-4">
+    <div className="bg-white rounded-2xl py-4 px-2">
       <div className="flex items-center gap-4">
         <div className="relative w-20 h-20 flex-shrink-0">
           <div className="rounded-full w-full h-full p-1 flex items-center justify-center border-2 border-primary overflow-hidden">
@@ -178,7 +180,7 @@ const ModifiedProductCategoryCard = ({ image, title, subtitle, index }) => (
           </div>
         </div>
         <div>
-          <h3 className="text-primary font-medium">
+          <h3 className="text-primary font-medium text-sm">
             {title}
             {subtitle && (
               <>

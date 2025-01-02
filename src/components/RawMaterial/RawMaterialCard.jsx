@@ -10,7 +10,7 @@ const RawMaterialCard = ({ index,icon, title }) => {
     `}>
       <div className="bg-white rounded-2xl p-6 px-4 h-full flex flex-col items-center justify-center gap-4">
         <img src={icon} alt={title} className="w-24 h-[80px]" />
-        <span className="text-primary font-medium bg-transparent border text-xs border-primary px-6 py-1 rounded-full ">{title}</span>
+        <span className="text-primary font-medium bg-transparent border text-sm border-primary px-4 py-1 rounded-full hover:bg-primary hover:text-white cursor-pointer">{title}</span>
       </div>
     </div>
   )

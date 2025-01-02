@@ -67,7 +67,7 @@ const ProductCard = ({ index, product }) => {
           <img
             src={product.image}
             alt={product.title}
-            className="w-full h-48 object-cover rounded-lg"
+            className="w-full h-44 object-cover rounded-lg"
           />
           <button className="absolute top-0 -right-2 p-2 bg-primary rounded-full">
             <img src={cartPlusIcon} alt="" className='w-4 h-4' />
@@ -77,19 +77,19 @@ const ProductCard = ({ index, product }) => {
           </button>
         </div>
 
-        <div className="mt-4">
-          <h3 className="text-lg font-semibold text-primary">{product.title}</h3>
+        <div className="mt-1">
+          <h3 className="text-md font-semibold text-primary">{product.title}</h3>
           <p className="text-xs text-gray-500">{product.description}</p>
           <div className="mt-1">
             <span className="text-sm font-bold text-secondary">${product.price}</span>
           </div>
 
-          <div className="mt-2 space-y-2">
+          <div className="mt-2 space-y-1">
             <button onClick={handleClick} className="w-full bg-primary text-white py-1 rounded-full flex items-center justify-center gap-1 text-xs">
               <span className="font-semibold">Explorar Más</span>
               <ArrowUpRight className="w-4 h-4" />
             </button>
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-1">
               <button className="flex-1 flex items-center justify-center gap-1 border border-primary text-primary py-1 rounded-full text-xs">
                 <span className="font-semibold">Comprar</span>
                 <ArrowUpRight className="w-4 h-4" />

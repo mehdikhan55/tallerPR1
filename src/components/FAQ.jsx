@@ -20,10 +20,10 @@ const FAQ = ({alignLeft=false}) => {
             className="border-2 border-primary rounded-lg overflow-hidden"
           >
             <button
-              className="w-full px-4 py-2 flex justify-between items-center text-left text-secondary hover:text-primary"
+              className={`w-full px-4 ${openIndex == index ? 'py-4 ': 'py-2 '} flex justify-between items-center text-left text-secondary hover:text-primary`}
               onClick={() => setOpenIndex(openIndex === index ? -1 : index)}
             >
-              <span className="font-semibold text-secondary">{faq.question}</span>
+              <span className="font-semibold text-secondary text-sm">{faq.question}</span>
               <span className='bg-secondary rounded-full p-1/2 text-white'>
                 {openIndex === index ?
                   <X className="w-5 h-5 " /> :
@@ -33,7 +33,7 @@ const FAQ = ({alignLeft=false}) => {
             </button>
 
             {openIndex === index && (
-              <div className="px-4 py-2 pt-0 text-secondary text-sm">
+              <div className={`px-4 ${openIndex == index ? 'py-4 ': 'py-2 '} pt-0 text-secondary text-xs`}>
                 {faq.answer}
               </div>
             )}

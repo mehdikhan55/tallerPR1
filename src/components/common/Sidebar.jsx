@@ -18,7 +18,7 @@ const Sidebar = () => {
   const [priceRange, setPriceRange] = useState([40, 290]);
 
   return (
-    <div className="w-72 p-4 pl-0 py-0 bg-white">
+    <div className="w-72 pr-8 pl-0 py-0 bg-white">
       <div className="mb-3">
         <div className="flex justify-between items-center mb-1 ">
           <h2 className="text-xs font-medium">Filtrar Por Precio</h2>
@@ -47,7 +47,7 @@ const Sidebar = () => {
           />
           <div className="flex justify-between mt-2 items-center">
             <div className="bg-primary px-3 py-1 rounded-full flex gap-1 text-white items-center justify-center text-xs">
-            <SlidersHorizontal size={14} color='white'/> <p>Filter</p>
+            <SlidersHorizontal size={12} color='white'/> <p>Filter</p>
 
             </div>
             <span className="text-xs text-gray-600">
