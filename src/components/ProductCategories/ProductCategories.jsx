@@ -15,7 +15,7 @@ const ProductCategories = () => {
         </p>
       </div>
       
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-4 gap-y-7 justify-items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-1 gap-y-7 justify-items-center w-full">
         {categories.map((category, index) => (
           <ProductCategoryCard
             key={index}

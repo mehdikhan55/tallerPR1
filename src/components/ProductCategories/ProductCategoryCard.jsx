@@ -1,8 +1,8 @@
 import React from 'react';
 
 const ProductCategoryCard = ({ image, title, subtitle }) => (
-  <div className="relative group cursor-pointer ">
-    <div className="rounded-full w-full p-2 flex items-center justify-center border-4 border-primary overflow-hidden aspect-square">
+  <div className="relative group cursor-pointer h-[15.9rem] w-[15.9rem]">
+    <div className="rounded-full w-full p-[0.4rem] flex items-center justify-center border-4 border-primary overflow-hidden aspect-square">
       <div className="relative w-full h-full">
         <div className='relative'>
           <img
@@ -19,6 +19,6 @@ const ProductCategoryCard = ({ image, title, subtitle }) => (
       </div>
     </div>
   </div>
- );
+);
 
 export default ProductCategoryCard;

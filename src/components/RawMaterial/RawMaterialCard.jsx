@@ -2,7 +2,7 @@ import React from 'react'
 
 const RawMaterialCard = ({ index,icon, title }) => {
   return (
-    <div className={`p-[1px] rounded-2xl shadow-[0px_0px_50px_#e0e0e0] transition-shadow duration-300 hover:shadow-md
+    <div className={`p-[1px] max-sm:mx-auto rounded-2xl shadow-[0px_0px_50px_#e0e0e0] transition-shadow duration-300 hover:shadow-md w-48 h-48
       ${index % 2 === 0
         ? 'bg-gradient-to-t from-primary via-primary/30 to-transparent'
         : 'bg-gradient-to-b from-primary via-primary/30 to-transparent'

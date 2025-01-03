@@ -32,13 +32,13 @@ const HeroSection = () => {
         </p>
 
         <div className="flex flex-col md:flex-row gap-4">
-          <button onClick={handleExploreProducts} className="bg-transparent border border-white hover:bg-secondary/90 text-white px-6 py-3 rounded-full 
+          <button onClick={handleExploreProducts} className="bg-transparent border border-white hover:bg-secondary/90 text-white px-6 py-1 rounded-full 
             flex items-center justify-center gap-1">
             <img src={exploreIcon} alt="" width={18} />
             Explorar Productos
           </button>
 
-          <button className="bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-full 
+          <button className="bg-primary hover:bg-primary/90 text-white px-6 py-1 rounded-full 
             flex items-center justify-center gap-1">
             <img src={userSetting} alt="" width={20} />
             Encargar Personalización
